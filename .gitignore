@@ -1,0 +1,11 @@
+# Ignoriere alle Dateien im Zielverzeichnis (target)
+target/
+
+# Ignoriere Maven-Logs und -Cache
+*.log
+.idea/
+*.iml
+*.swp
+
+# Ignoriere temporäre Dateien
+.DS_Store
