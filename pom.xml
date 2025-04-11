@@ -7,14 +7,14 @@
   <groupId>de.factorizer</groupId>
   <artifactId>my-app</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+  <version>1.0.0</version> <!-- Updated to 1.0.0 for release -->
   <name>my-app</name>
   <url>http://maven.apache.org</url>
 
-  <!-- Specify the Java version -->
   <properties>
     <maven.compiler.source>1.8</maven.compiler.source>
     <maven.compiler.target>1.8</maven.compiler.target>
+    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
   </properties>
 
   <dependencies>
@@ -51,10 +51,11 @@
         <artifactId>maven-jar-plugin</artifactId>
         <version>3.1.0</version>
         <configuration>
+          <finalName>factorizer-RELEASE-1.0.0</finalName> <!-- Desired final artifact name -->
           <archive>
             <manifestEntries>
-              <!-- Specify the main class -->
-              <Main-Class>de.factorizer.App</Main-Class>
+              <!-- Main class set to App -->
+              <Main-Class>de.factorizer.App</Main-Class> <!-- Make sure it points to your main class -->
             </manifestEntries>
           </archive>
         </configuration>
@@ -73,5 +74,5 @@
       </plugin>
     </plugins>
   </build>
-  
+
 </project>
