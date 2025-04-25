@@ -1,6 +1,8 @@
-package de.factorizer;
+package com.mycompany.app;
 
 import java.util.List;
+
+import de.factorizer.Factorizer;
 
 public class App {
     public static void main(String[] args) {
