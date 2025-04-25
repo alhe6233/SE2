@@ -1,13 +1,19 @@
 package de.factorizer;
 
+import org.junit.jupiter.api.Order;
 import org.junit.jupiter.api.Test;
 import static org.junit.jupiter.api.Assertions.*;
 import java.util.List;
 
 class FactorizerTest {
 
+    /**
+     * Test regular cases: n=1, n=2, n=3, n=4, n=27, n=65536, n=10952347,
+     * n=100000039 (prime number).
+     */
     @Test
-    void testFactorizeRegularCases() {
+    @Order(100)
+    void test100_factorize_regular_cases() {
         // Regular cases
         assertEquals(List.of(2), Factorizer.factorize(2));
         assertEquals(List.of(3), Factorizer.factorize(3));
@@ -18,14 +24,16 @@ class FactorizerTest {
     }
 
     @Test
-    void testFactorizeValidCornerCases() {
+    @Order(200)
+    void test200_factorize_corner_cases() {
         // Valid corner cases
         assertEquals(List.of(), Factorizer.factorize(1)); // 1 has no prime factors
         assertEquals(List.of(2147483647), Factorizer.factorize(2147483647)); // MAX_INT
     }
 
     @Test
-    void testFactorizeInvalidCases() {
+    @Order(300)
+    void test300_factorize_exception_cases() {
         // Invalid exception cases
         IllegalArgumentException exception1 = assertThrows(IllegalArgumentException.class, () -> {
             Factorizer.factorize(-1);
