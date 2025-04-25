@@ -5,9 +5,9 @@
   <modelVersion>4.0.0</modelVersion>
   
   <groupId>com.mycompany.app</groupId>
-  <artifactId>my-app</artifactId>
+ <artifactId>factorizer</artifactId>
   <packaging>jar</packaging>
-  <version>1.0-SNAPSHOT</version>
+ <version>RELEASE-1.0.0</version>
   <name>my-app</name>
   <url>http://maven.apache.org</url>
 
